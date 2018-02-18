@@ -1,6 +1,6 @@
 @import "syntax-variables";
 
-atom-text-editor, :host {
+atom-text-editor {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
 
@@ -51,221 +51,218 @@ atom-text-editor, :host {
   }
 }
 
-atom-text-editor .search-results .marker .region,
-:host .search-results .marker .region {
+atom-text-editor .search-results .syntax--marker .region {
   background-color: transparent;
   border: 1px solid @syntax-result-marker-color;
 }
 
-atom-text-editor .search-results .marker.current-result .region,
-:host .search-results .marker.current-result .region {
+atom-text-editor .search-results .syntax--marker.current-result .region {
   border: 1px solid @syntax-result-marker-color-selected;
 }
 
-.comment {
+.syntax--comment {
   color: @comment-red;
 }
 
-.keyword {
+.syntax--keyword {
   color: @keyword-gold;
 
-  &.control {
+  &.syntax--control {
   }
 
-  &.operator {
+  &.syntax--operator {
       color: @syntax-text-color;
   }
 
-  &.other.special-method {
+  &.syntax--other.syntax--special-method {
   }
 
-  &.other.unit {
+  &.syntax--other.syntax--unit {
   }
 }
 
-.storage {
+.syntax--storage {
   color: @purple;
 }
 
-.constant {
+.syntax--constant {
 
-  &.character.escape {
+  &.syntax--character.syntax--escape {
   }
 
-  &.numeric {
+  &.syntax--numeric {
   }
 
-  &.other.color {
+  &.syntax--other.syntax--color {
   }
 
-  &.other.symbol {
+  &.syntax--other.syntax--symbol {
   }
 
-  &.other.tags {
+  &.syntax--other.syntax--tags {
       color: @tag-cyan;
   }
 
 }
 
-.variable {
+.syntax--variable {
 
-  &.interpolation {
+  &.syntax--interpolation {
   }
 
-  &.parameter.function {
+  &.syntax--parameter.syntax--function {
   }
 }
 
-.invalid.illegal {
+.syntax--invalid.syntax--illegal {
   background-color: @red;
   color: @syntax-background-color;
 }
 
-.string {
+.syntax--string {
   color: @string-green;
 
 
-  &.regexp {
+  &.syntax--regexp {
 
-    .source.ruby.embedded {
+    .syntax--source.syntax--ruby.syntax--embedded {
     }
   }
 
-  &.other.link {
+  &.syntax--other.syntax--link {
   }
 
 }
 
-.punctuation {
-  &.definition {
-    &.comment {
+.syntax--punctuation {
+  &.syntax--definition {
+    &.syntax--comment {
         color: @comment-red;
     }
 
-    &.string,
-    &.variable,
-    &.parameters,
-    &.array {
+    &.syntax--string,
+    &.syntax--variable,
+    &.syntax--parameters,
+    &.syntax--array {
     }
 
-    &.heading,
-    &.identity {
+    &.syntax--heading,
+    &.syntax--identity {
     }
 
-    &.bold {
+    &.syntax--bold {
     }
 
-    &.italic {
+    &.syntax--italic {
     }
   }
 
-  &.section.embedded {
+  &.syntax--section.syntax--embedded {
   }
 
 }
 
-.support {
-  &.class {
+.syntax--support {
+  &.syntax--class {
   }
 
-  &.function  {
+  &.syntax--function  {
 
-    &.any-method {
+    &.syntax--any-method {
     }
   }
 }
 
-.entity {
+.syntax--entity {
   color: @name-yellow;
 
-  &.name.function {
+  &.syntax--name.syntax--function {
   }
 
-  &.name.type {
+  &.syntax--name.syntax--type {
   }
 
-  &.other.inherited-class {
+  &.syntax--other.syntax--inherited-class {
   }
 
-  &.name.class, &.name.type.class {
+  &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
   }
 
-  &.name.section {
+  &.syntax--name.syntax--section {
   }
 
-  &.name.tag {
+  &.syntax--name.syntax--tag {
   }
 
-  &.other.attribute-name {
+  &.syntax--other.syntax--attribute-name {
     color: @property-blue;
 
-    &.id {
+    &.syntax--id {
     }
 
   }
 }
 
-.meta {
-  &.class {
+.syntax--meta {
+  &.syntax--class {
   }
 
-  &.link {
+  &.syntax--link {
   }
 
-  &.require {
+  &.syntax--require {
   }
 
-  &.selector {
+  &.syntax--selector {
   }
 
-  &.separator {
+  &.syntax--separator {
   }
 
-  &.variable {
+  &.syntax--variable {
       color: @name-yellow;
   }
 }
 
-.none {
+.syntax--none {
 }
 
-.markup {
-  &.bold {
+.syntax--markup {
+  &.syntax--bold {
   }
 
-  &.changed {
+  &.syntax--changed {
   }
 
-  &.deleted {
+  &.syntax--deleted {
   }
 
-  &.italic {
+  &.syntax--italic {
   }
 
-  &.heading .punctuation.definition.heading {
+  &.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
   }
 
-  &.inserted {
+  &.syntax--inserted {
   }
 
-  &.list {
+  &.syntax--list {
   }
 
-  &.quote {
+  &.syntax--quote {
   }
 
-  &.raw.inline {
+  &.syntax--raw.syntax--inline {
   }
 
 }
 
-.source.gfm .markup {
+.syntax--source.syntax--gfm .syntax--markup {
   -webkit-font-smoothing: auto;
   &.heading {
   }
 }
 
-atom-text-editor[mini] .scroll-view,
-:host([mini]) .scroll-view {
+atom-text-editor[mini] .scroll-view {
   padding-left: 1px;
 }
